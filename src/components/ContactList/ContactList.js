@@ -13,16 +13,16 @@ const ContactList = () => {
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
 
-  const handlerContactDelete = name => {
-    dispatch(removeContacts(contacts.filter(contact => name !== contact.name)));
-  };
   return (
     <>
       <Contacts>
         {filterVisibleContacts().map(contact => (
           <Item key={contact.id}>
             {contact.name}: {contact.number}
-            <ItemBtn onClick={() => handlerContactDelete(contact.name)}>
+            <ItemBtn
+              type="button"
+              onClick={() => dispatch(removeContacts(contact.name))}
+            >
               Delete
             </ItemBtn>
           </Item>

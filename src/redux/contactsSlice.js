@@ -11,7 +11,7 @@ export const contactsSlice = createSlice({
       state.items.push(action.payload);
     },
     removeContacts(state, action) {
-      state.items = [...action.payload];
+      state.items = state.items.filter(item => item.name !== action.payload);
     },
     filterContacts(state, action) {
       state.filter = action.payload;

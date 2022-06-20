@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export const Contacts = styled.label`
+export const Contacts = styled.ul`
   list-style: none;
+  padding: 0;
   margin-bottom: 5px;
 `;
 

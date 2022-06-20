@@ -18,8 +18,7 @@ export const Label = styled.label`
 
 export const AddBtn = styled.button`
   cursor: pointer;
-  &:hover,
-  :focus {
+  &:hover {
     background-color: #0066cc;
   }
 `;
